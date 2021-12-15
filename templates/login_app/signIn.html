@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title_block %} SignUp page {% endblock %}
+{% block bodyblock %}
+
+<div class="container w-75">
+    <div class="text-center">
+    <div class="card border-success text-center mb-3">
+        <div class="card-header bg-transparent border-success">Add free</div>
+
+        <form class='form-control-sm' action="" method='POST'>
+            {% csrf_token %}
+            <h1 class='bg-info p-lg-3 rounded text-center'>SignIn page</h1>
+            <div class="p-4">
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-primary"><i
+                            class="bi bi-person-plus-fill text-white"></i></span>
+                            {{form.user_name}}
+                </div>
+
+                <div class="input-group mb-3 w-100">
+                    <span class="input-group-text bg-primary"><i
+                            class="bi bi-person-plus-fill text-white"></i></span>
+                            {{form.password}}
+                </div>
+
+
+                <div class="text-center">
+                    <button class="btn btn-primary w-100  mt-2" type="submit">
+                    Login
+                </button>
+                </div>
+                
+            </div>
+
+        </form>
+
+        <div class="card-footer bg-transparent border-success">
+            <a style="text-decoration: none !important;" href="https://www.linkedin.com/in/rakibul-islam-digonto-32a5a0195/">Know about us</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock bodyblock %}
