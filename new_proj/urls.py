@@ -9,7 +9,8 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', include('login_app.urls', namespace='login_app')),
-    path('', include('YouTube_DownApp.urls', namespace='YouTube_DownApp'))
+    path('', include('YouTube_DownApp.urls', namespace='YouTube_DownApp')),
+    path('video_player/', include('video_player.urls', namespace='video_player')),
 ]
 
 

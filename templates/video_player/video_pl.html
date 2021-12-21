@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title_block %} Video page {% endblock %}
+{% block bodyblock %}
+<video name='demo' controls autoplay width='50%' height='40%'>
+<source src="{{media}}" type="video/mp4"></source>
+</video>
+
+
+{% endblock bodyblock %}

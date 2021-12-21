@@ -31,6 +31,7 @@ def update_user_view(request):
     return render(request, 'ytd_app/home.html', {'single_user': single_user, 'form': frm})
 
 
+#view for user registation
 def reg_user(request):
     if request.method == 'POST':
         frm = CreateFrom(request.POST, request.FILES)
@@ -70,7 +71,7 @@ def reg_user(request):
     return render(request, 'login_app/signUp.html', {'form':frm})
 
 
-
+#view of signin view
 def signin_view(request):
     if not request.user.is_authenticated:
         frm = LoginFrom()
@@ -91,6 +92,7 @@ def signin_view(request):
         return redirect('login_app:signin')
 
 
+#sign out view
 def signout_view(request):
     logout(request)
     messages.success(request, 'You just logged Out')
